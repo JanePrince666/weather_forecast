@@ -1,4 +1,6 @@
 import psycopg2
+from .models import CitySearch
+from django.db.models import Sum
 
 
 def get_db_connection():
@@ -49,19 +51,15 @@ def get_all_cities():
     return [city[0] for city in cities]  # Возвращаем список названий городов
 
 
-def get_search_history(user_ip):
-    """Получает историю поисков для указанного IP-адреса."""
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute('''
-        SELECT city_name, search_count 
-        FROM city_searches
-        WHERE user_ip = %s
-    ''', (user_ip,))
-    history = cursor.fetchall()
-    cursor.close()
-    conn.close()
-    return [{'city_name': row[0], 'search_count': row[1]} for row in history]
+def get_search_history():
+    # Получаем суммарное количество поисков по каждому городу
+    history = (
+        CitySearch.objects.values('city_name')  # Получаем уникальные города
+        .annotate(total_searches=Sum('search_count'))  # Суммируем поиски по каждому городу
+        .order_by('-total_searches')  # Сортировка по количеству поисков
+    )
+
+    return list(history)
 
 
 def update_search_count(city_name, user_ip):

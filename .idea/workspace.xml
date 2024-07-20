@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="293fe7fc-1007-4c39-871a-067914c76a4f" name="Changes" comment="added manage_database.py">
-      <change afterPath="$PROJECT_DIR$/forecastapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forecastapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forecastapp/static/pexels-donaldtong94-139366.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forecastapp/templates/home_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forecastapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forecastapp/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forecastapp/views.py" afterDir="false" />
+    <list default="true" id="293fe7fc-1007-4c39-871a-067914c76a4f" name="Changes" comment="added my web application and all the dependencies it needs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/manage_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/manage_database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_forecast/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_forecast/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_forecast/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecastapp/manage_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/manage_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecastapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecastapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +76,20 @@
       <option name="project" value="LOCAL" />
       <updated>1721481630291</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added my web application and all the dependencies it needs">
+      <option name="closed" value="true" />
+      <created>1721482694082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721482694082</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added manage_database.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="added manage_database.py" />
+    <MESSAGE value="added my web application and all the dependencies it needs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added my web application and all the dependencies it needs" />
   </component>
 </project>

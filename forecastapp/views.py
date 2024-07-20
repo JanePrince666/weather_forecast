@@ -5,7 +5,6 @@ from django.http import JsonResponse
 from .forms import CityForm
 from .utils import WeatherForecast
 from .manage_database import get_all_cities, add_city, update_search_count, get_search_history
-from .models import SearchHistory
 
 
 # Класс для отображения погоды
@@ -36,9 +35,12 @@ class WeatherView(TemplateView):
 
         request.session['last_city'] = city
         user_ip = request.META.get('REMOTE_ADDR')
+        if weather_data:
+            request.session['last_city'] = city
+            user_ip = request.META.get('REMOTE_ADDR')
 
-        # Обновление счетчика поисков в базе данных
-        update_search_count(city, user_ip)
+            # Обновление счетчика поисков в базе данных
+            update_search_count(city, user_ip)
 
         coordinates = weather_forecast.coordinates
         if coordinates:
@@ -57,9 +59,8 @@ class WeatherView(TemplateView):
             return render(self.request, self.template_name, context)
 
 
-# Класс для отображения истории поиска
+# Класс для отображения истории поиска по API http://localhost:8000/api/search-history/
 class SearchHistoryView(View):
     def get(self, request):
-        user_ip = request.META.get('REMOTE_ADDR')
-        history = get_search_history(user_ip)
+        history = get_search_history()  # Получаем суммарную историю поиска
         return JsonResponse(history, safe=False, json_dumps_params={'ensure_ascii': False})
