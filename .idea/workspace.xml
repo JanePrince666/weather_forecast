@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="293fe7fc-1007-4c39-871a-067914c76a4f" name="Changes" comment="Added saving of user search history after restarting the container">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forecastapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forecastapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/tests.py" afterDir="false" />
-    </list>
+    <list default="true" id="293fe7fc-1007-4c39-871a-067914c76a4f" name="Changes" comment="Added City to models.py" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,13 +87,22 @@
       <option name="project" value="LOCAL" />
       <updated>1721485923628</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added City to models.py">
+      <option name="closed" value="true" />
+      <created>1721497391859</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721497391859</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added manage_database.py" />
     <MESSAGE value="added my web application and all the dependencies it needs" />
     <MESSAGE value="Added saving of user search history after restarting the container" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added saving of user search history after restarting the container" />
+    <MESSAGE value="Added City to models.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added City to models.py" />
   </component>
 </project>
