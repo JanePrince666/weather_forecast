@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forecast</title>
+  <style>
+    body {
+      background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+      background-image: url("{% static 'pexels-donaldtong94-139366.jpg' %}");
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* Центрируем по горизонтали */
+      align-items: flex-start; /* Выравнивание по верхнему краю */
+    }
+
+    .container {
+      width: 500px; /* Ширина контейнера */
+      border-radius: 8px; /* Закругленные углы */
+      padding: 20px; /* Отступы внутри контейнера */
+      display: flex;
+      flex-direction: column; /* Вертикальное расположение элементов */
+      gap: 20px; /* Отступ между элементами */
+    }
+
+    .city-form {
+      display: flex;
+      align-items: center; /* Выравнивание элементов по центру */
+      width: 100%; /* Занимает всю ширину контейнера */
+      background-color: transparent; /* Прозрачный фон для формы */
+    }
+
+    .form-input {
+      flex: 1; /* Занимает оставшееся пространство */
+      padding: 10px;
+      margin-right: 10px; /* Отступ между полем и кнопкой */
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px; /* Закругленные углы */
+      width: calc(100% - 120px); /* Устанавливаем ширину, учитывая кнопку */
+    }
+
+    .form-submit {
+      width: 100px; /* Фиксированная ширина кнопки */
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px; /* Закругленные углы */
+    }
+
+    .weather-box {
+      display: flex; /* Используем flexbox для создания колонок */
+      justify-content: space-between; /* Распределяем пространство между колонками */
+      width: calc(100% - 15px); /* Занимает ширину контейнера кроме отступа*/
+      color: #000; /* Черный текст для контраста */
+      padding: 5px; /* Отступы внутри блока с погодой */
+      background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для погоды */
+      border-radius: 8px; /* Закругленные углы */
+    }
+
+    .current-weather {
+      flex: 1; /* Занимает 50% ширины */
+      padding: 10px; /* Отступы внутри колонки */
+      border-right: 1px solid #ccc; /* Разделительная линия между текущей погодой и прогнозом */
+    }
+
+    .forecast-box {
+      flex: 1; /* Занимает 50% ширины */
+      padding: 10px; /* Отступы внутри колонки */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="city-form">
+      <form method="post" style="width: 100%;">
+        {% csrf_token %}
+        <input type="text" class="form-input" name="city" placeholder="Введите город" required list="city-list">
+        <datalist id="city-list">
+          {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+          {% endfor %}
+        </datalist>
+        <button type="submit" class="form-submit">Выбрать</button>
+      </form>
+    </div>
+    <div class="weather-box">
+      <div class="current-weather">
+        {% if weather_data %}
+          <p><b>{{ weather_data.city }}</b></p>
+          <p>Текущая температура: {{ weather_data.current_temperature }}°C</p>
+          <p>Скорость ветра: {{ weather_data.windspeed }} км/ч</p>
+        {% elif last_city %}
+          <p>Погода для последнего города <b>{{ last_city }}</b> не найдена.</p>
+        {% else %}
+          <p>Город не выбран</p>
+        {% endif %}
+      </div>
+      <div class="forecast-box">
+        <p>Прогноз:</p>
+        {% if weather_data %}
+          {% for forecast in weather_data.forecast %}
+            <p>Температура: {{ forecast.temperature }} °C</p>
+            <p>Скорость ветра: {{ forecast.windspeed }} км/ч</p>
+            <p>Давление: {{ forecast.pressure }} гПа</p>
+            <p>Облачность: {{ forecast.cloud_cover }}%</p>
+          {% endfor %}
+          {% if weather_data.precipitation %}
+            <p>{{ weather_data.precipitation }}</p>
+          {% endif %}
+          {% if weather_data.snowfall %}
+            <p>{{ weather_data.snowfall }}</p>
+          {% endif %}
+        {% else %}
+          <p>Данные о прогнозе отсутствуют.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

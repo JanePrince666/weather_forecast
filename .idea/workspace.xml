@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="293fe7fc-1007-4c39-871a-067914c76a4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/forecast_v1.0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="293fe7fc-1007-4c39-871a-067914c76a4f" name="Changes" comment="added manage_database.py">
+      <change afterPath="$PROJECT_DIR$/forecastapp/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecastapp/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecastapp/static/pexels-donaldtong94-139366.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecastapp/templates/home_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecastapp/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecastapp/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forecastapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/manage_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/manage_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecastapp/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/forecastapp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_forecast/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_forecast/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather_forecast/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +52,12 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/jane/PycharmProjects/forecast_v1.0"
+    "last_opened_file_path": "/home/jane/PycharmProjects/forecast_v1.0/weather_forecast/forecastapp"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/weather_forecast/forecastapp" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/weather_forecast" />
     </key>
@@ -69,6 +82,19 @@
       <option name="presentableId" value="Default" />
       <updated>1721479162019</updated>
     </task>
+    <task id="LOCAL-00001" summary="added manage_database.py">
+      <option name="closed" value="true" />
+      <created>1721481630291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721481630291</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added manage_database.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="added manage_database.py" />
   </component>
 </project>
